@@ -1,0 +1,10 @@
+{
+  "requestContext": {
+    "http": {
+      "method": "DELETE"
+    }
+  },
+  "queryStringParameters": {
+    "id": "1"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "requestContext": {
+    "http": {
+      "method": "PUT"
+    }
+  },
+  "body": "{\"id\":\"1\",\"task\":\"Learn Serverless AWS deeply\",\"completed\":true}"
+}
