@@ -5,11 +5,13 @@ The project demonstrates how to build a scalable, cost-effective backend using A
 
 ---
 
-## 🚀 Architecture Overview
+## 🚀 Serverless Architecture Overview
+
+![Serverless Architecture Diagram](infrastructure/architecture.png)
 
 Client → API Gateway → AWS Lambda → DynamoDB
 
-The application follows an event-driven, serverless architecture where each HTTP request triggers a Lambda function that performs CRUD operations on DynamoDB.
+The application follows an event-driven, serverless architecture where each HTTP request is routed through Amazon API Gateway, processed by AWS Lambda, and persisted in DynamoDB.
 
 ---
 
@@ -29,7 +31,7 @@ The application follows an event-driven, serverless architecture where each HTTP
 - Retrieve all tasks  
 - Update an existing task  
 - Delete a task  
-- Fully serverless (no EC2 / no servers)
+- Fully serverless (no EC2 / no server management)
 
 ---
 
@@ -40,42 +42,20 @@ The application follows an event-driven, serverless architecture where each HTTP
 | POST | `/todo` | Create a new task |
 | GET | `/todo` | Get all tasks |
 | PUT | `/todo` | Update a task |
-| DELETE | `/todo?id=1` | Delete task by ID |
+| DELETE | `/todo?id=1` | Delete a task by ID |
 
 ---
 
-## 🧪 Sample API Events
+## ▶️ How to Test the API
 
-Sample API Gateway events are available in the `sample-events/` folder to simulate requests locally or understand event structure.
+The API endpoints can be tested using **Postman** or any REST client.
 
----
-
-## 🧱 Lambda Logic
-
-A single Lambda function handles all CRUD operations by routing logic based on HTTP method:
-- POST → Create task
-- GET → Read tasks
-- PUT → Update task
-- DELETE → Delete task
-
-Code is available in `lambda/todoHandler.js`.
-
----
-
-## 📄 Documentation
-
-A detailed project report explaining architecture, workflow, and implementation is available in the `docs/` folder.
-
----
-
-## 🎯 Learning Outcomes
-
-- Understanding serverless architecture  
-- Hands-on experience with AWS Lambda, API Gateway, DynamoDB  
-- Designing RESTful APIs  
-- Working with event-driven cloud systems  
-
----
+**Example – Create Task (POST):**
+```json
+{
+  "id": "1",
+  "task": "Learn Serverless AWS"
+}
 
 ## 👤 Author
 
